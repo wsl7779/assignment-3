@@ -189,7 +189,7 @@ void draw_text(ShaderProgram* program, GLuint font_texture_id, std::string text,
 void initialise()
 {
     SDL_Init(SDL_INIT_VIDEO);
-    g_display_window = SDL_CreateWindow("WASSAO ITS CODING TIME WESFKJNRKGJN",
+    g_display_window = SDL_CreateWindow("Aris to Mars but the Asteroids have CRAZY Gravity in SPACE WOAH",
         SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
         WINDOW_WIDTH, WINDOW_HEIGHT,
         SDL_WINDOW_OPENGL);
@@ -274,7 +274,7 @@ void initialise()
         g_game_state.platforms[i].m_texture_id = load_texture(PLATFORM_FILEPATH);
         g_game_state.platforms[i].set_position(glm::vec3(i - 5.0f, -3.5f, 0.0f));
         g_game_state.platforms[i].update(0.0f, NULL, 0);
-        g_game_state.e_list[2+i] = g_game_state.platforms[i];
+        g_game_state.e_list[2 + i] = g_game_state.platforms[i];
     }
 
     // ————— GENERAL ————— //
@@ -321,7 +321,7 @@ void process_input()
     {
         g_game_state.player->set_angle_speed(glm::radians(-60.0f));
     }
-    if(key_state[SDL_SCANCODE_UP])
+    if (key_state[SDL_SCANCODE_UP])
     {
         if (fuel_amount > 0) {
             g_game_state.fire->m_is_active = true;
